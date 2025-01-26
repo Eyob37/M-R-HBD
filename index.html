@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday, Kalkidan!</title>
+  <title>Happy Birthday, Twins!</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      color: white;
+      background: linear-gradient(135deg, #ffccff, #ffcccc);
+      color: #333;
       text-align: center;
       overflow: hidden;
     }
@@ -35,7 +35,7 @@
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin: 10px 0;
     }
 
@@ -44,7 +44,7 @@
       padding: 15px 30px;
       font-size: 1rem;
       color: #fff;
-      background: #ff6f61;
+      background: #ff6699;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -52,7 +52,7 @@
     }
 
     button:hover {
-      background: #ff3b30;
+      background: #ff3366;
     }
 
     .balloons {
@@ -69,25 +69,31 @@
       width: 50px;
       height: 70px;
       border-radius: 50%;
-      animation: floatUp 5s infinite;
+      animation: floatUp 6s infinite ease-in-out;
     }
 
     .balloon:nth-child(1) {
-      left: 20%;
-      background: #FFB6C1;
+      left: 15%;
+      background: #ff9999;
       animation-delay: 0s;
     }
 
     .balloon:nth-child(2) {
-      left: 50%;
-      background: #ADD8E6;
+      left: 35%;
+      background: #ffcc66;
       animation-delay: 1s;
     }
 
     .balloon:nth-child(3) {
-      left: 80%;
-      background: #FFD700;
+      left: 55%;
+      background: #66ccff;
       animation-delay: 2s;
+    }
+
+    .balloon:nth-child(4) {
+      left: 75%;
+      background: #ff99ff;
+      animation-delay: 3s;
     }
 
     canvas {
@@ -125,17 +131,19 @@
   <div class="container">
     <!-- Intro Section -->
     <div id="intro" class="section active">
-      <h1>🎂 Welcome to the Birthday Celebration 🎉</h1>
-      <p>Click below to start the celebration!</p>
+      <h1>🎉 Happy Birthday, Little Twins! 🎂</h1>
+      <p>Click below to start the fun celebration!</p>
       <button id="startBtn">Start Celebration</button>
     </div>
 
     <!-- Main Celebration Section -->
     <div id="main" class="section">
-      <h1>Happy Birthday, Kalkidan! 💖</h1>
-      <p>Your kindness and care make the world brighter!</p>
+      <h1>🎈 Hooray! It's Your Special Day! 🎁</h1>
+      <p>Wishing you lots of laughter, fun, and love!</p>
+      <h3>happy birthday for Mhret and Redet</h3>
       <button id="playMusic">🎵 Play Music</button>
       <div class="balloons">
+        <div class="balloon"></div>
         <div class="balloon"></div>
         <div class="balloon"></div>
         <div class="balloon"></div>
@@ -146,9 +154,9 @@
 
     <!-- Ending Section -->
     <div id="ending" class="section">
-      <h1>💌 Special Message</h1>
-      <p>Dear Kalkidan, always remember how much you are loved. This day is just for you!</p>
-      <button id="replayBtn">Replay Celebration</button>
+      <h1>🎉 Thank You for Celebrating! 🎉</h1>
+      <p>We hope your day is as wonderful as you are!</p>
+      <button id="replayBtn">Play Again</button>
     </div>
   </div>
   <script>
@@ -165,10 +173,10 @@
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Function to launch fireworks
+    // Fireworks effect
     function launchFireworks() {
       const particles = [];
-      const colors = ["#ff3b30", "#ffd700", "#00ff7f", "#add8e6"];
+      const colors = ["#ff6699", "#ffcc66", "#66ccff", "#ff99ff"];
 
       function createFirework(x, y) {
         for (let i = 0; i < 100; i++) {
@@ -223,7 +231,7 @@
     const musicButton = document.getElementById("playMusic");
     musicButton.addEventListener("click", () => {
       const audio = new Audio(
-        "https://www.bensound.com/bensound-music/bensound-ukulele.mp3"
+        "https://www.bensound.com/bensound-music/bensound-happyrock.mp3"
       );
       audio.play();
     });
